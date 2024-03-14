@@ -15,8 +15,6 @@
                             <div class="text-danger"
                                 *ngIf="(userForm.get('name')?.invalid) && (userForm.get('name')?.dirty || userForm.get('name')?.touched || submitted)">
                                 <span *ngIf="userForm.get('name')?.errors?.['required']">Name is required.</span>
-                                <!-- <span *ngIf="userForm.get('name')?.hasError('noLeadingTrailingSpaces')">Name should not
-                                    have leading or trailing spaces.</span> -->
                             </div>
                         </div>
                         <div class="form-group">
