@@ -22,7 +22,7 @@ export class AddEditUserComponent implements OnInit {
       id: [''],
       name: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
-      role: [ '',Validators.required]
+      role: ['', Validators.required]
     });
   }
 
@@ -40,19 +40,8 @@ export class AddEditUserComponent implements OnInit {
     });
   }
 
-  // onSubmit() {
-  //   if (this.userForm.valid) {
-  //     const user = this.userForm.value;
-  //     if (user.id) {
-  //       this.userService.editUser(user);
-  //     } else {
-  //       this.userService.addUser(user);
-  //     }
-  //     this.router.navigate(['/user-list']);
-  //   }
-  // }
   onSubmit(): void {
-    this.submitted = true; 
+    this.submitted = true;
 
     if (this.userForm.invalid) {
       return;
@@ -64,7 +53,7 @@ export class AddEditUserComponent implements OnInit {
     } else {
       this.userService.addUser(user);
     }
-    
+
     this.router.navigate(['/user-list'])
     this.submitted = false;
   }
